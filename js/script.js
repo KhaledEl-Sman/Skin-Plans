@@ -18,7 +18,6 @@ $(document).ready(function () {
     let condation1 = true;
     let condation2 = true;
     $('.question1 li').click(function () {
-        console.log(condation1);
         if (q1.length > 0) {
             for (let i = 0; i < q1.length; i++) {
                 if (q1[i] == $(this).children(0).children(0).val()) {
