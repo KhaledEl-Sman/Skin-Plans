@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>Skin Plans | Assessment</title>
+    <!--meta-->
+    <meta charset="UTF-8">
+    <meta name="author" content="El-Sman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo&family=Cantarell:wght@400;700&family=Fira+Sans:wght@200;400;700&family=Oxygen:wght@300;400;700&family=Roboto:wght@300;400;900&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="mb-3">
+        <nav class="d-flex justify-content-center py-2" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;">
+            <img src="images/logo.8b706e8f.png" alt="skin plans" style="width: 6rem;">
+        </nav>
+        <div dir="ltr" style="width: 90%; margin: 0px auto;">
+            <p class="mb-1"><span class="current">1</span> / <span>13</span></p>
+            <div class="progress" style="height: 0.5rem;">
+                <div class="progress-bar bg-prime" role="progressbar" style="width: 7.69230769%;"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-2">
+        <div class="curtain d-none"></div>
+        <form action="results.html" method="post">
+
+            <div class="question question1">
+                <p><strong>بشرتي تعاني من ….. (يمكنك اختيار اكتر من مشكلة)</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2">
+                        <label class="d-block mb-0 p-2">
+                            <input type="checkbox" name="skinConcerns" value="1" hidden>
+                            الجفاف
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2">
+                        <label class="d-block mb-0 p-2">
+                            <input type="checkbox" name="skinConcerns" value="2" hidden>
+                            الخطوط الرفيعة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2">
+                        <label class="d-block mb-0 p-2">
+                            <input type="checkbox" name="skinConcerns" value="3" hidden>
+                            البقع الداكنة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2">
+                        <label class="d-block mb-0 p-2">
+                            <input type="checkbox" name="skinConcerns" value="4" hidden>
+                            التجاعيد
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2">
+                        <label class="d-block mb-0 p-2">
+                            <input type="checkbox" name="skinConcerns" value="5" hidden>
+                            الانتفاخ أسفل العين
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question2 d-none">
+                <p><strong>نوع بشرتي...</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="cheeks" value="1" hidden>
+                            دهنية
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="cheeks" value="2" hidden>
+                            مختلطة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="cheeks" value="3" hidden>
+                            عادية
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="cheeks" value="4" hidden>
+                            جافة
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question3 d-none">
+                <p><strong>البقع الداكنة في بشرتي موجودة بنسبة..؟</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="blackSpots" value="1" hidden>
+                            منعدمة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="blackSpots" value="2" hidden>
+                            صغيرة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="blackSpots" value="3" hidden>
+                            متوسطة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="blackSpots" value="4" hidden>
+                            كبيرة
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question4 d-none">
+                <p><strong>الخطوط الرفيعة الموجودة على بشرتي</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="slimLines" value="1" hidden>
+                            تظهر عند الابتسام
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="slimLines" value="2" hidden>
+                            خفيفة
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="slimLines" value="3" hidden>
+                            واضحة
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question5 d-none">
+                <p><strong>التجاعيد على بشرتي</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="wrinkles" value="1" hidden>
+                            غير موجودة حتى الآن
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="wrinkles" value="2" hidden>
+                            قليلة و سطحية
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="wrinkles" value="3" hidden>
+                            منتشرة و عميقة
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question6 d-none">
+                <p><strong>أشرب …. كوب يوميا</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="waterAmount" value="1" hidden>
+                            5 >
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="waterAmount" value="2" hidden>
+                            5 - 6
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="waterAmount" value="3" hidden>
+                            6 - 7
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="waterAmount" value="4" hidden>
+                            7 - 8
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="waterAmount" value="5" hidden>
+                            8+
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question7 d-none">
+                <div class="overlay w-100" style="overflow: hidden;">
+                    <div class="responsive4 mb-3 d-flex flex-column justify-content-center align-items-center text-center"
+                        style="width: 33rem;">
+                        <div class="h5" style="font-size: 1.25rem; margin-top: 5vh;">جاري معالجة بياناتك</div>
+                        <div dir="ltr" style="position: relative; width: 100%; margin-bottom: 1.5rem;">
+                            <div class="w-100 progress" style="position: absolute; height: 0.5rem;"></div>
+                            <div class="progress-bar bg-prime" role="progressbar"
+                                style="width: 0%; position: absolute; height: 0.5rem; border-radius: 0.5rem;"></div>
+                        </div>
+                        <strong style="line-height: 1.3;font-size: 1.25rem;">
+                            ايجاد الروتين المناسب لبشرتك يمكن أن يكون من الصعب اكتشافه، وهنا يأتي دور<img
+                                src="images/logo.8b706e8f.png" alt="skin plans"
+                                style="width: 7rem; margin: 0px 0.5rem;">ليجد لك الحل الأمثل للقضاء على مشاكل البشرة
+                        </strong>
+                        <img src="images/vegetables_intro.30aae202.png" style="max-width: 100%;" alt="original product"
+                            class="img-fluid mt-3">
+                    </div>
+                </div>
+                <div class="content d-none">
+                    <p><strong>أتناول الخضروات … خلال الأسبوع</strong></p>
+                    <ul class="list-group">
+                        <li class="list-group-item my-2" onclick="next(event)">
+                            <label class="d-block mb-0 p-2">
+                                <input type="radio" name="vegetablesAmount" value="1" hidden>
+                                لا أتناول الخضروات
+                            </label>
+                        </li>
+                        <li class="list-group-item my-2" onclick="next(event)">
+                            <label class="d-block mb-0 p-2">
+                                <input type="radio" name="vegetablesAmount" value="2" hidden>
+                                مرتين
+                            </label>
+                        </li>
+                        <li class="list-group-item my-2" onclick="next(event)">
+                            <label class="d-block mb-0 p-2">
+                                <input type="radio" name="vegetablesAmount" value="3" hidden>
+                                5-3 مرات
+                            </label>
+                        </li>
+                        <li class="list-group-item my-2" onclick="next(event)">
+                            <label class="d-block mb-0 p-2">
+                                <input type="radio" name="vegetablesAmount" value="4" hidden>
+                                يومياً
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question question8 d-none">
+                <p><strong>عادةً، نومي يكون ...</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="sleepingHours" value="1" hidden>
+                            غير منتظم و متقلب - < 5 </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="sleepingHours" value="2" hidden>
+                            6 - 8
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="sleepingHours" value="3" hidden>
+                            +8
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question9 d-none">
+                <p><strong>أضع مستحضرات التجميل</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="usingMakeUp" value="1" hidden>
+                            يوميا
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="usingMakeUp" value="2" hidden>
+                            أحيانا
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="usingMakeUp" value="3" hidden>
+                            لا أضع
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question10 d-none">
+                <p><strong>كمية الضغط النفسي التي اواجهها يومياً</strong></p>
+                <ul class="list-group">
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="dailyPressure" value="1" hidden>
+                            ضغط شديد
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="dailyPressure" value="2" hidden>
+                            ضغط متوسط
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="dailyPressure" value="3" hidden>
+                            ضغط بسيط
+                        </label>
+                    </li>
+                    <li class="list-group-item my-2" onclick="next(event)">
+                        <label class="d-block mb-0 p-2">
+                            <input type="radio" name="dailyPressure" value="4" hidden>
+                            لا يوجد ضغوطات
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question question11 d-none">
+                <div class="overlay">
+                    <p class="h4 text-center mb-3">جاري تحميل معلومات الطقس في منطقتك ...</p>
+                </div>
+                <div class="content d-none">
+                    <p class="h5 text-center mb-3">إليكِ معلومات الطقس في منطقتك والتي لها تأثير سلبي على بشرتك</p>
+                    <div class="mb-4 w-100">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span dir="ltr"><span id="degree"></span> C</span>
+                            <span>درجة الحرارة</span>
+                        </div>
+                        <div class="progress" dir="ltr">
+                            <div class="degree-progress progress-bar bg-prime" role="progressbar"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 w-100">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span dir="ltr" id="humidity"></span>
+                            <span>الرطوبة</span>
+                        </div>
+                        <div class="progress" dir="ltr">
+                            <div class="progress-bar bg-prime" role="progressbar" style="width: 44.12%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 w-100">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span dir="ltr">عالية</span>
+                            <span>درجة التلوث</span>
+                        </div>
+                        <div class="progress" dir="ltr">
+                            <div class="progress-bar bg-prime" role="progressbar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 w-100">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span dir="ltr">مرتفعه</span>
+                            <span>الأشعة فوق البنفسجية</span>
+                        </div>
+                        <div class="progress" dir="ltr">
+                            <div class="progress-bar bg-prime" role="progressbar" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question question12 d-none">
+                <p style="max-width: 25rem; margin: auto; font-size: 0.8rem;">
+                    يمكنك ان تضع صورة لك وسيتمكن الذكاء الاصطناعي من توضيح المشكلة التي تعاني منها بشرتك لتسهيل معرفة
+                    الخيار الامثل لك
+                </p>
+                <div class="userPicContainer">
+                    <div id="camera"
+                        style="position: absolute;height:100%;width:100%; top: 0; left: 0; z-index: 3;">
+                    </div>
+                    <img id="blah" src="images/download.png" alt="صورة المستخدم" style="height: 35vh;">
+                    <div class="scanningBar d-none"></div>
+                    <svg class="right d-none" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                        style="color: rgb(40, 168, 40); font-size: 3rem; position: absolute; top: calc(50% - 1.5rem); left: calc(50% - 1.5rem); background: rgb(255, 255, 255); border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 18px 9px; border: none; outline: none;">
+                        <path
+                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="d-flex justify-content-center my-lg-1">
+                    <div class="d-block d-lg-none bg-prime text-white"
+                        style="position: relative; width: 5.5rem; height: 2.5rem; padding: 0.25rem 0.5rem; border: 2px solid rgb(54, 56, 115); margin: 0.5rem; display: flex; align-items: center; justify-content: center; border-radius: 3rem;">
+                        <figure>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                                style="width: 1.5rem; height: 1.5rem;">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10.707 3H14.5l.5.5v9l-.5.5h-13l-.5-.5v-9l.5-.5h3.793l.853-.854L6.5 2h3l.354.146.853.854zM2 12h12V4h-3.5l-.354-.146L9.293 3H6.707l-.853.854L5.5 4H2v8zm1.5-7a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zM8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0-1a3 3 0 1 0 0 6 3 3 0 0 0 0-6z">
+                                </path>
+                            </svg>
+                        </figure>
+                        <input type="button" value="Take a Snap" capture="camera" id="btPic"
+                            style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; opacity: 0;"
+                            onclick="takeSnapShot()" />
+                    </div>
+                    <div class="d-block bg-prime text-white"
+                        style="position: relative; width: 5.5rem; height: 2.5rem; padding: 0.25rem 0.5rem; border: 2px solid rgb(54, 56, 115); margin: 0.5rem; display: flex; align-items: center; justify-content: center; border-radius: 3rem;">
+                        <figure>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                                style="width: 1.3rem; height: 1.3rem;">
+                                <path fill-rule="evenodd"
+                                    d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z"
+                                    clip-rule="evenodd"></path>
+                                <path
+                                    d="M10.648 7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z">
+                                </path>
+                                <path fill-rule="evenodd" d="M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </figure>
+                        <input type="file" onchange="readURL(this)" accept=".jpg, .jpeg, .png, .bmp"
+                            style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                    </div>
+                </div>
+                <button onclick="skip()" type="button" class="skipBtn btn rounded-pill m-auto"
+                    style="width: 12rem; text-decoration: underline;">تجاوز هذه الخطوة</button>
+            </div>
+
+            <div class="question question13 d-none">
+                <p class="h4">الخطوة الأخيرة</p>
+                <p>
+                    تم الانتهاء من تحليل نتائجك ستعرف تفاصيل بشرتك في الصفحه التاليه يرجي كتابة بيانتك لارسال النتائج
+                </p>
+                <div class="mb-2 cl-prime" role="group" aria-labelledby="radio-group" style="width: 100%;">
+                    <ul class="list-group flex-row justify-content-between">
+                        <div style="width: 45%; display: inline-block;">
+                            <li class="list-group-item my-2">
+                                <label class="d-block">
+                                    <input name="gender" type="radio" value="female" style="visibility: hidden;">
+                                    أنثى
+                                </label>
+                            </li>
+                        </div>
+                        <div style="width: 45%; display: inline-block;">
+                            <li class="list-group-item my-2">
+                                <label class="d-block">
+                                    <input name="gender" type="radio" value="male" style="visibility: hidden;">
+                                    ذكر
+                                </label>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <input name="name" id="name" type="text" class="p-2 pr-3 w-100 rounded-pill" style="color: #363873;"
+                    placeholder="اسمك" value>
+                <p class="nameAlert" style="color: red; margin-bottom: 1rem;"></p>
+                <input name="age" id="age" type="number" class="p-2 pr-3 w-100 rounded-pill" style="color: #363873;"
+                    min="0" placeholder=" عمرك" value>
+                <p class="ageAlert" style="color: red; margin-bottom: 1rem;"></p>
+                <input name="phone" id="phone" type="phone" class="p-2 pr-3 w-100 rounded-pill" style="color: #363873;"
+                    placeholder="رقم التلفون" value>
+                <p class="phoneAlert" style="color: red; margin-bottom: 1rem;"></p>
+            </div>
+
+            <div class="finalStep d-none">
+                <button type="submit" id="submit" class="btn text-white bg-prime border-0 rounded-pill w-100 p-3"
+                    disabled>
+                    <a class="text-white rounded-pill submitFormBtn d-inline-block">اعرض
+                        النتائج الخاصة بي</a>
+                </button>
+                <div class="mt-2" dir="ltr" style="font-size: 0.9rem;">
+                    <p class="mb-1">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                            style="font-size: 1.5rem; margin-right: 0.25rem;">
+                            <path
+                                d="M832 464h-68V240c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zM540 701v53c0 4.4-3.6 8-8 8h-40c-4.4 0-8-3.6-8-8v-53a48.01 48.01 0 1 1 56 0zm152-237H332V240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v224z">
+                            </path>
+                        </svg>
+                        information are 100% secure
+                    </p>
+                </div>
+            </div>
+
+            <div class="formArrowsContainer m-auto">
+                <div class="myPagination d-flex align-items-center flex-row container">
+                    <button type="button" disabled class="btn next text-white bg-prime border-0 rounded-pill"
+                        style="padding: 0.5rem .7rem;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 2rem;">
+                            <path fill-rule="evenodd"
+                                d="M8.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L10.793 8 8.146 5.354a.5.5 0 010-.708z"
+                                clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 01.5-.5H11a.5.5 0 010 1H4.5A.5.5 0 014 8z"
+                                clip-rule="evenodd">
+                            </path>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn prev text-white bg-prime rounded-pill d-none"
+                        style="padding: 0.5rem .7rem;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 2rem;">
+                            <path fill-rule="evenodd"
+                                d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                                clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
